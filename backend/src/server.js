@@ -17,6 +17,7 @@ const PORT=process.env.PORT;
 
 app.get("/api/health",(req,res)=> {
     res.status(200).json({message: "API is running"});
+    console.log("API is running");
 })
 
 async function initDB() {

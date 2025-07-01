@@ -60,6 +60,7 @@ const CreateScreen = () => {
       router.back();
     } catch (error) {
       console.error("Error creating transaction:", error);
+      console.error("Error message:", error.message);
       Alert.alert("Error", "Failed to create transaction. Please try again.");
     } finally {
       setIsLoading(false);
@@ -114,7 +115,7 @@ const CreateScreen = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.amountContainer}>
-          <Text style={styles.currencySymbol}>$</Text>
+          <Text style={styles.currencySymbol}>₹</Text>
           <TextInput 
             style={styles.amountInput}
             placeholder="0.00"
